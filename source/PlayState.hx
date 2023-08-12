@@ -1775,12 +1775,6 @@ class PlayState extends MusicBeatState
 				// gitaroo man easter egg
 				FlxG.switchState(new GitarooPause());
 			}
-			else
-			if (FlxG.random.bool(1.0))
-			{
-				// gitaroo man easter egg
-				FlxG.switchState(new FumoGameOver());
-			}
 			else			
 			{
 				var boyfriendPos = boyfriend.getScreenPosition();

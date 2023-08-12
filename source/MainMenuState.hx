@@ -26,13 +26,13 @@ class MainMenuState extends MusicBeatState
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'options'];
+	var optionShit:Array<String> = ['online', 'options'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
-	var engineVer:String = "1.2.0";
-	var onlineVer:String = "BETA";
+	var engineVer:String = "1.2.1";
+	var onlineVer:String = "BETA VERSION";
 
 	override function create()
 	{
@@ -101,7 +101,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.x = 20;
+			menuItem.screenCenter(X); 			
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
@@ -114,7 +114,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		var versionShit2:FlxText = new FlxText(5, FlxG.height - 18, 0, "FX Engine Online" + onlineVer, 12);
+		var versionShit2:FlxText = new FlxText(15, FlxG.height - 35, 0, "Multi.hx by TyDev " + onlineVer, 12);
 		versionShit2.scrollFactor.set();
 		versionShit2.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit2);
@@ -199,15 +199,8 @@ class MainMenuState extends MusicBeatState
 
 								switch (daChoice)
 								{
-									case 'story mode':
-										FlxG.switchState(new StoryMenuState());
-										trace("Story Menu Selected");
-									case 'freeplay':
-										FlxG.switchState(new FreeplayState());
-
-										trace("Freeplay Menu Selected");
-									case 'credits':
-										FlxG.switchState(new Credits());	
+									case 'online':
+										FlxG.switchState(new ComingSoon());	
 									case 'options':
 										//FlxTransitionableState.skipNextTransIn = true;
 										//FlxTransitionableState.skipNextTransOut = true;

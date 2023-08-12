@@ -1,11 +1,15 @@
-# FX-Engine-Online
+# Multi.hx
 
 * This may possibly never be public.
 
-* FX Engine Online is a modification of FX Engine v1.2.1 that uses Funkin' Battle Royale's source for it to be playable online!
+* Multi.hx is a modification of FX Engine v1.2.1 that uses FNFNet's source for it to be playable online!
 
 # Credits
 
-* FX Engine Devs (basically just me) - The engine itself
+* Multi.hx Devs (basically just me) - Multi.hx!
 
-* XieneDev - Funkin' Battle Royale
+* FX Engine Devs (basically just me again) - The engine itself
+
+* FNFNET DEVS - FNF Net lol
+
+* XieneDev - Main Menu Asses from Funkin' Battle Royale

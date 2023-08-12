@@ -100,7 +100,7 @@ class TitleState extends MusicBeatState
 		if (FlxG.save.data.zxnm == null)
 			FlxG.save.data.zxnm = false;
 
-		FlxG.save.bind('fxengineonline', 'tydev');
+		FlxG.save.bind('multihx', 'tydev');
 
 		FXEngineData.initSave();
 		
@@ -418,14 +418,9 @@ class TitleState extends MusicBeatState
 			case 7:
 				addMoreText('newgrounds');
 				ngSpr.visible = true;
-			// credTextShit.text += '\nNewgrounds';
 			case 8:
 				deleteCoolText();
 				ngSpr.visible = false;
-			// credTextShit.visible = false;
-
-			// credTextShit.text = 'Shoutouts people on twitter lolz';
-			// credTextShit.screenCenter();
 			case 9:
 				createCoolText([curWacky[0]]);
 			// credTextShit.visible = true;
@@ -444,11 +439,11 @@ class TitleState extends MusicBeatState
 			case 16:
 				deleteCoolText();				
 			case 17:
-				addMoreText('FX');
+				addMoreText('MultiHX');
 			case 18:
-				addMoreText('Engine');	
+				addMoreText('FNF ONLINE');	
 			case 19:
-				addMoreText('So Real');		
+				addMoreText(' ');		
 			case 20:
 				deleteCoolText();								
 			case 21:
