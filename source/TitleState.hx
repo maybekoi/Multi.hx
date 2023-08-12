@@ -100,7 +100,7 @@ class TitleState extends MusicBeatState
 		if (FlxG.save.data.zxnm == null)
 			FlxG.save.data.zxnm = false;
 
-		FlxG.save.bind('fxengine', 'tydev');
+		FlxG.save.bind('fxengineonline', 'tydev');
 
 		FXEngineData.initSave();
 		

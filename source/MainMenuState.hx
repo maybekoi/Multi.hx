@@ -32,7 +32,8 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 
 	var engineVer:String = "1.2.0";
-	
+	var onlineVer:String = "BETA";
+
 	override function create()
 	{
 		#if desktop
@@ -112,6 +113,11 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
+		var versionShit2:FlxText = new FlxText(5, FlxG.height - 18, 0, "FX Engine Online" + onlineVer, 12);
+		versionShit2.scrollFactor.set();
+		versionShit2.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit2);
 
 		// NG.core.calls.event.logEvent('swag').send();
 
