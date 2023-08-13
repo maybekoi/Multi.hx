@@ -41,7 +41,7 @@ class OnlineNickState extends MusicBeatState
     add(errorText);
 
 
-    var nickText:FlxText = new FlxText(FlxG.width/2 - 250, FlxG.height * 0.5 - 40, "Nickname:");
+    var nickText:FlxText = new FlxText(FlxG.width/2 - 250, FlxG.height * 0.5 - 40, "Username:");
     nickText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     add(nickText);
 

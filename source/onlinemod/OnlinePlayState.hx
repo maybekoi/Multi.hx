@@ -35,6 +35,13 @@ class OnlinePlayState extends PlayState
   var loadedVoices:FlxSound;
   var loadedInst:Sound;
 
+  public static var boyfriend:Boyfriend;
+  public static var dad:Dad;
+  public static var selectedBF:String = 'bf';
+  public static var selectedDad:String = 'dad';
+  public static var isStoryMode:Bool = false;
+  public static var freeplayChar:Bool = false;
+
   var ready:Bool = false;
 
   var inPause:Bool = false;
@@ -56,6 +63,11 @@ class OnlinePlayState extends PlayState
       PlayState.SONG.player1 = 'bf';
       PlayState.SONG.player2 = 'dad';
     }
+
+    /*
+	  boyfriend = new Boyfriend(770, 450, (!isStoryMode && freeplayChar ? selectedBF : SONG.player1));
+	  dad = new Character(100, 450, (!isStoryMode && freeplayChar ? selectedDad : SONG.player2));
+    */
 
     super.create();
 
@@ -91,7 +103,7 @@ class OnlinePlayState extends PlayState
 
 
     // Add XieneDev watermark
-    var xieneDevWatermark:FlxText = new FlxText(-4, FlxG.height * 0.9 + 50, FlxG.width, "Multi.hx BETA", 16);
+    var xieneDevWatermark:FlxText = new FlxText(-4, FlxG.height * 0.9 + 50, FlxG.width, "Multi.hx BETA (ONLINE MODE)", 16);
 		xieneDevWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		xieneDevWatermark.scrollFactor.set();
 		add(xieneDevWatermark);

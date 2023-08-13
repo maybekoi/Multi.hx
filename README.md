@@ -6,8 +6,6 @@
 
 # Credits
 
-* Multi.hx Devs (basically just me) - Multi.hx!
-
-* FX Engine Devs (basically just me again) - The engine itself
+* TyDev - FX Engine, Multi.hx, and the silly splash :)
 
 * XieneDev - Funkin' Battle Royale Creator

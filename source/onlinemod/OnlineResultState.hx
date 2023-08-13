@@ -20,7 +20,7 @@ class OnlineResultState extends MusicBeatState
 
   override function create()
   {
-    var bg:FlxSprite = new FlxSprite().loadGraphic('assets/images/onlinemod/online_bg1.png');
+    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
 		add(bg);
 
 

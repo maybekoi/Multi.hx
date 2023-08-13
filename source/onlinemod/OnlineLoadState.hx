@@ -67,7 +67,7 @@ class OnlineLoadState extends MusicBeatState
 
   override function create()
   {
-    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('onlinemod/online_bg2'));
+    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
 		add(bg);
 
 
@@ -283,6 +283,9 @@ class OnlineLoadState extends MusicBeatState
   {
     if (loadedVoices && loadedInst)
     {
+      /*
+      LoadingState.loadAndSwitchState(new OnlineCharacterSelectState());
+      */
       LoadingState.loadAndSwitchState(new OnlinePlayState(customSong, voices, inst));
     }
   }

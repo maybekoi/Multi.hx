@@ -58,7 +58,7 @@ class OnlineLobbyState extends MusicBeatState
 
   override function create()
   {
-    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('onlinemod/online_bg0'));
+    var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
 		add(bg);
 
 

@@ -13,7 +13,7 @@ class OnlineMenuState extends MusicBeatState
 {
   var curSelected:Int = 0;
 
-  var options:Array<String> = ["play online"];
+  var options:Array<String> = ["play online", "play offline"];
   var descriptions:Array<String> = ["Play online with other people.",
   "Play songs that have been downloaded during online games."];
 
@@ -74,8 +74,8 @@ class OnlineMenuState extends MusicBeatState
       {
         case 0: // Play online
           FlxG.switchState(new OnlinePlayMenuState());
-        /*case 1: // Host server
-          FlxG.switchState(new OnlineHostMenu());*/
+        case 1: // offline shit
+          FlxG.switchState(new OfflineMenuState());
       }
     }
   }
