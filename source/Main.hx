@@ -84,7 +84,7 @@ class Main extends Sprite
 		// Gotta run this before any assets get loaded.
 		ModCore.initialize();
 
-		initialState = TitleState;
+		initialState = splash.HaxeFlixelSplash;
 
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen));
 
