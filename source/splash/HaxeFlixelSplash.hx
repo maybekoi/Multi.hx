@@ -20,6 +20,6 @@ class HaxeFlixelSplash extends MusicBeatState
 
     public function onVideoEnd():Void
     {
-        FlxG.switchState(new MainMenuState());
+        FlxG.switchState(new TitleState());
     }    
 }
