@@ -17,6 +17,7 @@ import flixel.util.FlxColor;
 //import io.newgrounds.NG;
 import Controls.KeyboardScheme;
 import lime.app.Application;
+import onlinemod.OnlineMenuState;
 
 using StringTools;
 
@@ -200,7 +201,7 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'online':
-										FlxG.switchState(new ComingSoon());	
+										FlxG.switchState(new OnlineMenuState());	
 									case 'options':
 										//FlxTransitionableState.skipNextTransIn = true;
 										//FlxTransitionableState.skipNextTransOut = true;

@@ -114,7 +114,7 @@ class Main extends Sprite
 		dateNow = dateNow.replace(" ", "_");
 		dateNow = dateNow.replace(":", "'");
 
-		path = "./crash/" + "FX-Engine_" + dateNow + ".txt";
+		path = "./crash/" + "Multi.hx_" + dateNow + ".txt";
 
 		for (stackItem in callStack)
 		{
@@ -127,7 +127,7 @@ class Main extends Sprite
 			}
 		}
 
-		errMsg += "\nUncaught Error: " + e.error + "\nPlease report this error to the GitHub page: https://github.com/TyDevX/FX-Engine\n\n> Crash Handler written by: sqirra-rng";
+		errMsg += "\nUncaught Error: " + e.error + "\nPlease report this error to tydevx on discord or @TyDev_ on twitter. Crash Handler written by: sqirra-rng";
 
 		if (!FileSystem.exists("./crash/"))
 			FileSystem.createDirectory("./crash/");
