@@ -1800,15 +1800,6 @@ class PlayState extends MusicBeatState
 			#end
 		}
 
-		if (FlxG.keys.justPressed.SEVEN)
-		{
-			FlxG.switchState(new ChartingState());
-			canDie = false;
-			#if cpp
-			DiscordClient.changePresence("Chart Editor", null, null, true);
-			#end
-		}
-
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
@@ -1842,12 +1833,6 @@ class PlayState extends MusicBeatState
 			iconP2.animation.curAnim.curFrame = 1;
 		else
 			iconP2.animation.curAnim.curFrame = 0;
-
-		/* if (FlxG.keys.justPressed.NINE)
-			FlxG.switchState(new Charting()); */
-
-		if (FlxG.keys.justPressed.EIGHT)
-			FlxG.switchState(new AnimationDebug(SONG.player2));
 
 		if (startingSong)
 		{
