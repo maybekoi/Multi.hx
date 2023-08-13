@@ -7,6 +7,9 @@ import flixel.addons.ui.FlxInputText;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.util.FlxAxes;
+#if desktop
+import Discord.DiscordClient;
+#end
 
 class OnlineNickState extends MusicBeatState
 {
@@ -22,7 +25,12 @@ class OnlineNickState extends MusicBeatState
 		add(bg);
 
 
-    var topText = new FlxText(0, FlxG.height * 0.25, "Insert nickname");
+		#if desktop
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("Typing in a nickname", null);
+		#end
+
+    var topText = new FlxText(0, FlxG.height * 0.25, "Insert Username");
     topText.setFormat(Paths.font("vcr.ttf"), 64, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     topText.screenCenter(FlxAxes.X);
     add(topText);

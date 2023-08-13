@@ -15,6 +15,10 @@ import flixel.tweens.FlxTween;
 
 import sys.FileSystem;
 
+#if desktop
+import Discord.DiscordClient;
+#end
+
 class OnlineLobbyState extends MusicBeatState
 {
   var clientTexts:Map<Int, Int> = []; // Maps a player ID to the corresponding index in clientsGroup
@@ -34,6 +38,11 @@ class OnlineLobbyState extends MusicBeatState
   public function new(keepClients:Bool=false)
   {
     super();
+
+		#if desktop
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("In the Online Lobby", null);
+		#end
 
     if (!keepClients)
     {

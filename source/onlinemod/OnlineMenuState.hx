@@ -5,6 +5,9 @@ import flixel.FlxSprite;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+#if desktop
+import Discord.DiscordClient;
+#end
 
 class OnlineMenuState extends MusicBeatState
 {

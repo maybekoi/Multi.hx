@@ -39,7 +39,7 @@ class MainMenuState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("MainMenuState.hx Moment!!", null);
+		DiscordClient.changePresence("In the Main Menu", null);
 		#end
 
 		transIn = FlxTransitionableState.defaultTransIn;
@@ -219,7 +219,7 @@ class MainMenuState extends MusicBeatState
 			FlxG.switchState(new extrashit.Menu());
 	
 			#if desktop
-			DiscordClient.changePresence("In the config menu", null, null, true);
+			DiscordClient.changePresence("Selecting a Character", null, null, true);
 			#end
 		}
 

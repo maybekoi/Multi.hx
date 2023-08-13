@@ -59,6 +59,10 @@ class OnlinePlayState extends PlayState
 
     super.create();
 
+		#if desktop
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("Rapping against someone online...", null);
+		#end
 
     clients = OnlineLobbyState.clients.copy();
     clientScores = [];
@@ -87,11 +91,11 @@ class OnlinePlayState extends PlayState
 
 
     // Add XieneDev watermark
-    var xieneDevWatermark:FlxText = new FlxText(-4, FlxG.height * 0.9 + 50, FlxG.width, "XieneDev Battle Royale", 16);
+    var xieneDevWatermark:FlxText = new FlxText(-4, FlxG.height * 0.9 + 50, FlxG.width, "Multi.hx BETA", 16);
 		xieneDevWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		xieneDevWatermark.scrollFactor.set();
 		add(xieneDevWatermark);
-    xieneDevWatermark.cameras = [camHUD];
+    
 
 
     // The screen with 'Waiting for players (1/4)' stuff

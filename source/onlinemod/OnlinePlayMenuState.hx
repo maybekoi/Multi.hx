@@ -15,6 +15,9 @@ import openfl.events.IOErrorEvent;
 
 import openfl.net.Socket;
 import openfl.utils.ByteArray;
+#if desktop
+import Discord.DiscordClient;
+#end
 
 class OnlinePlayMenuState extends MusicBeatState
 {
@@ -47,6 +50,10 @@ class OnlinePlayMenuState extends MusicBeatState
     bg.color = 0xFFFF6E6E;
 		add(bg);
 
+		#if desktop
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("Getting ready to play online...", null);
+		#end
 
     var topText = new FlxText(0, FlxG.height * 0.05, "Connect to server");
     topText.setFormat(Paths.font("vcr.ttf"), 64, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -108,21 +115,8 @@ class OnlinePlayMenuState extends MusicBeatState
 		connectButton.screenCenter(FlxAxes.X);
 		add(connectButton);
 
-
-    var helpButton = new FlxUIButton(FlxG.width - 170, FlxG.height * 0.925 - 20, "Help", () -> {
-      #if linux
-      Sys.command('/usr/bin/xdg-open', ["https://github.com/XieneDev/FunkinBattleRoyale/blob/main/HELP.md", "&"]);
-      #else
-      FlxG.openURL('https://github.com/XieneDev/FunkinBattleRoyale/blob/main/HELP.md');
-      #end
-    });
-    helpButton.setLabelFormat(24, FlxColor.BLACK, CENTER);
-    helpButton.resize(150, FlxG.height * 0.075);
-    add(helpButton);
-
 		FlxG.mouse.visible = true;
     FlxG.autoPause = true;
-
 
     muteKeys = FlxG.sound.muteKeys;
     volumeUpKeys = FlxG.sound.volumeUpKeys;
