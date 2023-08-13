@@ -209,15 +209,6 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 
-		if (FlxG.keys.justPressed.SEVEN)
-		{
-			FlxG.switchState(new extrashit.Menu());
-	
-			#if desktop
-			DiscordClient.changePresence("Selecting a Character", null, null, true);
-			#end
-		}
-
 		super.update(elapsed);
 
 		menuItems.forEach(function(spr:FlxSprite)
