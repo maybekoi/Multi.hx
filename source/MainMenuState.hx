@@ -31,6 +31,7 @@ class MainMenuState extends MusicBeatState
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
+	var scrollTxt:FlxSprite;
 
 	var engineVer:String = "1.2.1";
 	var onlineVer:String = "BETA VERSION";
@@ -89,6 +90,59 @@ class MainMenuState extends MusicBeatState
 		add(magenta);
 		// magenta.scrollFactor.set();
 
+		scrollTxt = new FlxText(0, FlxG.height - 0, 0, "Test thing I guess", 12);
+		scrollTxt.antialiasing = true;
+		scrollTxt.screenCenter();
+		scrollTxt.y = 0;
+		scrollTxt.scrollFactor.x = 0;
+		scrollTxt.scrollFactor.y = 0;
+		add(scrollTxt);
+
+		var mf:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/menuframes.png');
+		mf.scrollFactor.x = 0;
+		mf.scrollFactor.y = 0;
+		mf.setGraphicSize(Std.int(mf.width * 1));
+		mf.updateHitbox();
+		mf.screenCenter();
+		mf.antialiasing = true;
+		add(mf);
+
+		var t1:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles1.png');
+		t1.scrollFactor.x = 0;
+		t1.scrollFactor.y = 0;
+		t1.setGraphicSize(Std.int(t1.width * 1));
+		t1.updateHitbox();
+		t1.screenCenter();
+		t1.antialiasing = true;
+		add(t1);
+
+		var t2:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles2.png');
+		t2.scrollFactor.x = 0;
+		t2.scrollFactor.y = 0;
+		t2.setGraphicSize(Std.int(t2.width * 1));
+		t2.updateHitbox();
+		t2.screenCenter();
+		t2.antialiasing = true;
+		add(t2);
+
+		var t3:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles3.png');
+		t3.scrollFactor.x = 0;
+		t3.scrollFactor.y = 0;
+		t3.setGraphicSize(Std.int(t3.width * 1));
+		t3.updateHitbox();
+		t3.screenCenter();
+		t3.antialiasing = true;
+		add(t3);
+
+		var t4:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles4.png');
+		t4.scrollFactor.x = 0;
+		t4.scrollFactor.y = 0;
+		t4.setGraphicSize(Std.int(t4.width * 1));
+		t4.updateHitbox();
+		t4.screenCenter();
+		t4.antialiasing = true;
+		add(t4);
+
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -102,7 +156,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X); 			
+			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
@@ -213,7 +267,11 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
+			/*
 			spr.x = 20;
+			// Nuh uh
+			*/
+			spr.screenCenter(X);
 		});
 	}
 

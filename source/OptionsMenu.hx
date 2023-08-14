@@ -31,7 +31,10 @@ class OptionsMenu extends MusicBeatState
 			new QuaverBarOption("Cooler healthBar thing"),
 			new PTOption("Pizza Tower Taunt Sound Effect Toggle"),
 			new IconBopOption("Make the icons bop with the bpm")
-		])
+		]),
+		new OptionCatagory("Experimental", [
+			new PosBarOption("Buggy ass song position barr"),
+		])		
 	];
 
 	private var currentDescription:String = "";

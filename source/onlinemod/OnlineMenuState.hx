@@ -13,8 +13,8 @@ class OnlineMenuState extends MusicBeatState
 {
   var curSelected:Int = 0;
 
-  var options:Array<String> = ["play online", "play offline"];
-  var descriptions:Array<String> = ["Play online with other people.",
+  var options:Array<String> = ["play online", "host a server", "play offline"];
+  var descriptions:Array<String> = ["Play online with other people.", "Host your own Multi.hx server!",
   "Play songs that have been downloaded during online games."];
 
   var descriptionText:FlxText;
@@ -26,6 +26,50 @@ class OnlineMenuState extends MusicBeatState
     bg.color = 0xFFFF6E6E;
     add(bg);
 
+		var mf:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/menuframes.png');
+		mf.scrollFactor.x = 0;
+		mf.scrollFactor.y = 0;
+		mf.setGraphicSize(Std.int(mf.width * 1));
+		mf.updateHitbox();
+		mf.screenCenter();
+		mf.antialiasing = true;
+		add(mf);
+
+		var t1:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles1.png');
+		t1.scrollFactor.x = 0;
+		t1.scrollFactor.y = 0;
+		t1.setGraphicSize(Std.int(t1.width * 1));
+		t1.updateHitbox();
+		t1.screenCenter();
+		t1.antialiasing = true;
+		add(t1);
+
+		var t2:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles2.png');
+		t2.scrollFactor.x = 0;
+		t2.scrollFactor.y = 0;
+		t2.setGraphicSize(Std.int(t2.width * 1));
+		t2.updateHitbox();
+		t2.screenCenter();
+		t2.antialiasing = true;
+		add(t2);
+
+		var t3:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles3.png');
+		t3.scrollFactor.x = 0;
+		t3.scrollFactor.y = 0;
+		t3.setGraphicSize(Std.int(t3.width * 1));
+		t3.updateHitbox();
+		t3.screenCenter();
+		t3.antialiasing = true;
+		add(t3);
+
+		var t4:FlxSprite = new FlxSprite(-80).loadGraphic('assets/images/mainmenu/triangles4.png');
+		t4.scrollFactor.x = 0;
+		t4.scrollFactor.y = 0;
+		t4.setGraphicSize(Std.int(t4.width * 1));
+		t4.updateHitbox();
+		t4.screenCenter();
+		t4.antialiasing = true;
+		add(t4);
 
     grpControls = new FlxTypedGroup<Alphabet>();
 		add(grpControls);
@@ -74,7 +118,9 @@ class OnlineMenuState extends MusicBeatState
       {
         case 0: // Play online
           FlxG.switchState(new OnlinePlayMenuState());
-        case 1: // offline shit
+        case 1: // host
+          FlxG.switchState(new OnlineHostMenu());            
+        case 2: // offline
           FlxG.switchState(new OfflineMenuState());
       }
     }

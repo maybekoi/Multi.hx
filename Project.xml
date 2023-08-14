@@ -50,7 +50,6 @@
 	<!-- MULTIHX SHIT DO NOT DELETE ANYTHING THATS HERE -->
 	<define name="CRASH_HANDLER" if="desktop" />
 
-	<assets path='example_mods' rename='' embed='false'/>
 	<assets path="plugins/" rename='' if="windows"/>
 	<assets path="dlls/" rename='' if="windows"/>
 
